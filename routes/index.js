@@ -11,7 +11,7 @@
       console.log(req.body);
       var personInfo = req.body;
 
-
+//checks user information for submission into database
       if (!personInfo.email || !personInfo.username || !personInfo.fullName || !personInfo.phoneNumber || !personInfo.address || !personInfo.password || !personInfo.passwordConf) {
           res.send();
       } else {
@@ -28,7 +28,7 @@
                           } else {
                               c = 1;
                           }
-
+                        //creates a new person
                           var newPerson = new User({
                               unique_id: c,
                               email: personInfo.email,
