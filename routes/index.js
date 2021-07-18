@@ -103,7 +103,12 @@
           }
       });
   });
-
+pp.get("/", async function(req,res){
+    //get all posts from db
+    //this also somehow includes all the comments
+    const allPosts = await posts.find({}).populate('comments');
+    res.render("home", {posts: allPosts});
+});
   function updateRecord(req, res) {
       User.findOne({ _id: req.body.id }, (err, doc) => {
           //this will give you the document what you want to update.. then 
