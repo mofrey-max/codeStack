@@ -12,7 +12,7 @@ Requirement
 6. Mongodb
 
 # After installing all the required files in the project folder 
-  you need to be access it from command line to start the application
+  you need to access it from command line to start the application
 
 Starting Application
 1. In the project folder on terminal type nodemon to start the server
